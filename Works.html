@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html class="dark" lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <!-- Primary SEO Tags -->
+    <title>PORTFOLIO | Archive</title>
+    <meta name="title" content="Your Primary Keyword - Catchy Brand Name">
+    <meta name="description" content="A brief, compelling summary of your page (150-160 characters) to encourage users to click from search results.">
+    <meta name="keywords" content="keyword1, keyword2, keyword3">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://www.yourdomain.com/page-url" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.yourdomain.com/">
+    <meta property="og:title" content="Your Primary Keyword - Catchy Brand Name">
+    <meta property="og:description" content="A brief, compelling summary of your page for social media audiences.">
+    <meta property="og:image" content="https://www.yourdomain.com/og-image.jpg">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://www.yourdomain.com/">
+    <meta property="twitter:title" content="Your Primary Keyword - Catchy Brand Name">
+    <meta property="twitter:description" content="A brief, compelling summary of your page for Twitter.">
+    <meta property="twitter:image" content="https://www.yourdomain.com/og-image.jpg">
+
+    <!-- Existing Assets -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;700;800&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+    
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-container": "#201f1f",
+                        "on-surface-variant": "#c4c7c7",
+                        "on-primary-container": "#7a7878",
+                    },
+                    "spacing": {
+                        "element-gap": "4rem",
+                        "section-gap": "12rem",
+                        "grid-gutter": "2rem",
+                        "safe-margin": "5vw",
+                        "container-max": "1440px"
+                    },
+                    "fontFamily": {
+                        "body-md": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "display-lg": ["Plus Jakarta Sans"],
+                        "headline-md": ["Plus Jakarta Sans"],
+                        "display-xl": ["Plus Jakarta Sans"],
+                        "label-caps": ["Inter"]
+                    },
+                    "fontSize": {
+                        "body-md": ["16px", {"lineHeight": "1.6", "letterSpacing": "0", "fontWeight": "400"}],
+                        "body-lg": ["20px", {"lineHeight": "1.6", "letterSpacing": "-0.01em", "fontWeight": "400"}],
+                        "display-lg": ["120px", {"lineHeight": "0.95", "letterSpacing": "-0.04em", "fontWeight": "800"}],
+                        "headline-md": ["64px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "display-xl": ["160px", {"lineHeight": "0.9", "letterSpacing": "-0.05em", "fontWeight": "800"}],
+                        "label-caps": ["12px", {"lineHeight": "1", "letterSpacing": "0.1em", "fontWeight": "600"}]
+                    }
+                },
+            },
+        }
+    </script>
+    <style>
+        body {
+            background-color: #080808;
+            color: #e5e2e1;
+            overflow-x: hidden;
+            min-height: max(884px, 100dvh);
+            cursor: none;
+        }
+        @media (max-width: 768px) {
+            body {
+                cursor: auto;
+            }
+        }
+        
+        /* Custom Cursor styling consistent with homepage */
+        .custom-cursor {
+            width: 20px;
+            height: 20px;
+            border: 1px solid white;
+            border-radius: 50%;
+            position: fixed;
+            pointer-events: none;
+            z-index: 9999;
+            transition: transform 0.1s ease-out, background 0.3s ease;
+        }
+        .dot {
+            width: 4px;
+            height: 4px;
+            background: white;
+            border-radius: 50%;
+            position: fixed;
+            pointer-events: none;
+            z-index: 9999;
+        }
+
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        
+        .text-stroke {
+            -webkit-text-stroke: 1px rgba(255, 255, 255, 0.2);
+            color: transparent;
+        }
+        
+        /* Track Setup */
+        .project-track {
+            display: flex;
+            gap: 1.5rem;
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
+            scroll-behavior: smooth;
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+            padding-bottom: 3rem;
+            /* Calculate padding so items center nicely on mobile/tablet/desktop */
+            padding-left: 7.5vw;
+            padding-right: 7.5vw;
+        }
+        @media (min-width: 768px) {
+            .project-track {
+                gap: 2rem;
+                padding-left: 15vw;
+                padding-right: 15vw;
+            }
+        }
+        @media (min-width: 1024px) {
+            .project-track {
+                padding-left: 25vw;
+                padding-right: 25vw;
+            }
+        }
+
+        .project-track::-webkit-scrollbar {
+            display: none;
+        }
+
+        /* Card Stability */
+        .project-card-premium {
+            scroll-snap-align: center;
+            flex: 0 0 85vw; /* Mobile width */
+            transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+            opacity: 0.5;
+            transform: scale(0.95);
+        }
+
+        @media (min-width: 768px) {
+            .project-card-premium {
+                flex: 0 0 70vw; /* Tablet width */
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .project-card-premium {
+                flex: 0 0 50vw; /* Desktop width */
+            }
+        }
+
+        /* Hover Effects */
+        .project-card-premium:hover, 
+        .project-card-premium:active {
+            opacity: 1;
+            transform: scale(1);
+            background: rgba(255, 255, 255, 0.05);
+            border-color: rgba(255, 255, 255, 0.2);
+        }
+
+        .project-card-premium img {
+            transition: transform 1s ease, filter 0.5s ease;
+        }
+
+        .project-card-premium:hover img {
+            transform: scale(1.05);
+            filter: grayscale(0%);
+        }
+    </style>
+</head>
+
+<body class="bg-[#080808] text-white selection:bg-white selection:text-black">
+    <!-- Custom Cursor -->
+    <div class="custom-cursor hidden md:block"></div>
+    <div class="dot hidden md:block"></div>
+
+    <!-- TopAppBar -->
+    <header class="fixed top-0 left-0 right-0 z-50 bg-[#080808] border-b border-white/10 md:bg-transparent md:border-none">
+        <nav class="fixed top-2 md:top-4 left-1/2 -translate-x-1/2 z-50 w-[95%] max-w-[1440px] bg-white/5 backdrop-blur-md border border-white/10 rounded-full">
+            <div class="flex justify-between items-center w-full px-4 md:px-8 py-4 md:py-6">
+                <div class="flex items-center gap-3 md:gap-4">
+                    <span id="menu-open" class="material-symbols-outlined text-white cursor-pointer hover:text-emerald-400 transition-colors">menu</span>
+                    <span class="font-['Plus_Jakarta_Sans'] text-base md:text-xl font-black tracking-tighter text-white uppercase">Portfolio</span>
+                </div>
+                
+                <!-- Desktop Navigation -->
+                <div class="hidden md:flex gap-8 items-center">
+                    <a class="font-['Plus_Jakarta_Sans'] tracking-[0.2em] uppercase text-xs font-bold text-white/40 hover:text-white transition-all duration-500 ease-out" href="./Index.html">Home</a>
+                    <a class="font-['Plus_Jakarta_Sans'] tracking-[0.2em] uppercase text-xs font-bold text-white border-b border-white pb-1" href="./Works.html">Work</a>
+                    <a class="font-['Plus_Jakarta_Sans'] tracking-[0.2em] uppercase text-xs font-bold text-white/40 hover:text-white transition-all duration-500 ease-out" href="./About.html">About</a>
+                </div>
+
+                <!-- CTA Button -->
+                <a href="./Contact.html">
+                    <button class="font-['Plus_Jakarta_Sans'] tracking-[0.2em] uppercase text-[10px] md:text-xs font-bold text-[#080808] bg-white px-4 py-2 md:px-6 md:py-3 rounded-full hover:bg-opacity-90 hover:scale-105 active:scale-95 transition-all duration-300 ease-out shadow-[0_0_20px_rgba(255,255,255,0.15)]">
+                        Get In Touch
+                    </button>
+                </a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Work Hero Section -->
+    <section class="relative min-h-[70vh] md:min-h-[80vh] flex items-center overflow-hidden bg-[#080808] pt-24 md:pt-0">
+        <!-- Background Container -->
+        <div class="absolute inset-0 z-0">
+            <video autoplay muted loop playsinline class="w-full h-full object-cover opacity-40">
+                <source src="./Assets/work_bg.mp4" type="video/mp4">
+            </video>
+            <div class="absolute inset-0 bg-gradient-to-b from-black/60 via-transparent to-[#080808]"></div>
+        </div>
+
+        <!-- Content -->
+        <div class="relative z-10 px-safe-margin max-w-[1440px] mx-auto w-full pt-16 md:pt-32">
+            <div class="grid grid-cols-12 gap-grid-gutter">
+                <div class="col-span-12 md:col-span-10 lg:col-span-8">
+                    <h1 class="text-5xl sm:text-6xl md:text-7xl lg:font-display-xl lg:text-display-xl font-bold lg:font-extrabold uppercase mb-6 md:mb-8 leading-[1.15] md:leading-[0.9] text-white tracking-normal">
+                        Technical<br/>
+                        <span class="text-stroke">Solutions</span>
+                    </h1>
+                    <!-- <h1 class="text-5xl sm:text-6xl md:text-7xl lg:font-display-xl lg:text-display-xl font-extrabold lg:font-extrabold uppercase mb-6 md:mb-8 leading-[0.95] md:leading-[0.9] text-white tracking-tight lg:tracking-normal">
+                        Technical<br/>
+                        <span class="text-stroke">Solutions</span>
+                    </h1> -->
+                    <!-- <h1 class="font-display-xl text-5xl sm:text-6xl md:text-7xl lg:text-[160px] uppercase mb-6 md:mb-8 leading-[1.1] md:leading-[0.9] text-white">
+                        Technical<br/>
+                        <span class="text-transparent text-stroke md:text-stroke-1">Solutions</span>
+                    </h1> -->
+                    
+                    <p class="font-body-md md:font-body-lg text-sm md:text-lg text-white/60 max-w-xl leading-relaxed">
+                        A curated collection of digital experiences focusing on technical excellence, aesthetic precision, and the power of minimalist execution.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <main class="relative z-20 bg-[#080808]">
+        <!-- Project Slider Section -->
+        <section class="project-slider-wrapper py-16 md:py-24 overflow-hidden">
+            <!-- Navigation Hint -->
+            <div class="px-safe-margin max-w-container-max mx-auto mb-10 md:mb-12 flex flex-col md:flex-row justify-between items-start md:items-end gap-6">
+                <div>
+                    <span class="font-label-caps text-[10px] md:text-xs text-emerald-500 tracking-[0.4em] mb-4 block">PORTFOLIO INDEX</span>
+                    <h2 class="font-headline-md text-4xl md:text-6xl text-white uppercase leading-none">Project<br/>Archive</h2>
+                </div>
+                <div class="flex gap-4">
+                    <span class="font-label-caps text-[10px] md:text-xs text-white/40 tracking-widest">SCROLL TO EXPLORE</span>
+                </div>
+            </div>
+
+            <!-- The Track -->
+            <div class="project-track">
+                
+                <!-- Project 01: MediGen -->
+                <a href="Archive.html#medical-ai" class="block">
+                    <div class="project-card-premium bg-surface-container/30 border border-white/5 p-6 md:p-8 lg:p-12 transition-all duration-700 hover:border-emerald-500/50 rounded-sm">
+                        <div class="grid grid-cols-1 md:grid-cols-12 gap-6 md:gap-8 items-center">
+                            <div class="md:col-span-5">
+                                <div class="aspect-[4/3] md:aspect-[3/4] overflow-hidden bg-black rounded-sm">
+                                    <img src="./Assets/webtech.png" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700" alt="MediGen AI">
+                                </div>
+                            </div>
+                            <div class="md:col-span-7 flex flex-col justify-center">
+                                <span class="font-label-caps text-[9px] md:text-[11px] text-[#7a7878] mb-3 md:mb-4 block tracking-widest">01 / DESKTOP APP</span>
+                                <h2 class="font-headline-md text-3xl md:text-4xl lg:text-5xl uppercase mb-4 md:mb-6 text-white leading-tight">MEDIGEN AI</h2>
+                                <p class="font-body-md text-sm md:text-base text-[#c4c7c7] mb-6 md:mb-8">Medical Report Generator using C# WinForms and MySQL.</p>
+                                <div class="flex flex-wrap gap-2 mb-6 md:mb-8">
+                                    <span class="px-3 py-1.5 rounded-full border border-white/10 text-[9px] md:text-[10px] tracking-wider text-white/60">C#</span>
+                                    <span class="px-3 py-1.5 rounded-full border border-white/10 text-[9px] md:text-[10px] tracking-wider text-white/60">MYSQL</span>
+                                </div>
+                                <span class="material-symbols-outlined text-3xl md:text-4xl text-emerald-500 transition-transform group-hover:translate-x-2">arrow_right_alt</span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Project 02: University of Sahiwal -->
+                <a href="Archive.html#uni-landing" class="block">
+                    <div class="project-card-premium bg-surface-container/30 border border-white/5 p-6 md:p-8 lg:p-12 transition-all duration-700 hover:border-emerald-500/50 rounded-sm">
+                        <div class="grid grid-cols-1 md:grid-cols-12 gap-6 md:gap-8 items-center">
+                            <div class="md:col-span-5">
+                                <div class="aspect-[4/3] md:aspect-[3/4] overflow-hidden bg-black rounded-sm">
+                                    <img src="./Assets/proj1.jpeg" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700" alt="Uni Sahiwal">
+                                </div>
+                            </div>
+                            <div class="md:col-span-7 flex flex-col justify-center">
+                                <span class="font-label-caps text-[9px] md:text-[11px] text-[#7a7878] mb-3 md:mb-4 block tracking-widest">02 / WEB DESIGN</span>
+                                <h2 class="font-headline-md text-3xl md:text-4xl lg:text-5xl uppercase mb-4 md:mb-6 text-white leading-tight">UOS PORTAL</h2>
+                                <p class="font-body-md text-sm md:text-base text-[#c4c7c7] mb-6 md:mb-8">Modern academic landing page built with Bootstrap and Figma.</p>
+                                <div class="flex flex-wrap gap-2 mb-6 md:mb-8">
+                                    <span class="px-3 py-1.5 rounded-full border border-white/10 text-[9px] md:text-[10px] tracking-wider text-white/60">BOOTSTRAP</span>
+                                    <span class="px-3 py-1.5 rounded-full border border-white/10 text-[9px] md:text-[10px] tracking-wider text-white/60">HTML5</span>
+                                </div>
+                                <span class="material-symbols-outlined text-3xl md:text-4xl text-emerald-500 transition-transform group-hover:translate-x-2">arrow_right_alt</span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Project 03: Cafe Website -->
+                <a href="Archive.html#frontend-ui" class="block">
+                    <div class="project-card-premium bg-surface-container/30 border border-white/5 p-6 md:p-8 lg:p-12 transition-all duration-700 hover:border-emerald-500/50 rounded-sm">
+                        <div class="grid grid-cols-1 md:grid-cols-12 gap-6 md:gap-8 items-center">
+                            <div class="md:col-span-5">
+                                <div class="aspect-[4/3] md:aspect-[3/4] overflow-hidden bg-black rounded-sm">
+                                    <img src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&q=80&w=800" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700" alt="Cafe">
+                                </div>
+                            </div>
+                            <div class="md:col-span-7 flex flex-col justify-center">
+                                <span class="font-label-caps text-[9px] md:text-[11px] text-[#7a7878] mb-3 md:mb-4 block tracking-widest">03 / FRONTEND</span>
+                                <h2 class="font-headline-md text-3xl md:text-4xl lg:text-5xl uppercase mb-4 md:mb-6 text-white leading-tight">ELIXIR CAFE</h2>
+                                <p class="font-body-md text-sm md:text-base text-[#c4c7c7] mb-6 md:mb-8">A luxury tech aesthetic website for a premium coffee brand.</p>
+                                <div class="flex flex-wrap gap-2 mb-6 md:mb-8">
+                                    <span class="px-3 py-1.5 rounded-full border border-white/10 text-[9px] md:text-[10px] tracking-wider text-white/60">TAILWIND</span>
+                                    <span class="px-3 py-1.5 rounded-full border border-white/10 text-[9px] md:text-[10px] tracking-wider text-white/60">JS</span>
+                                </div>
+                                <span class="material-symbols-outlined text-3xl md:text-4xl text-emerald-500 transition-transform group-hover:translate-x-2">arrow_right_alt</span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Project 04: Expense Tracker -->
+                <a href="Archive.html#expense-tracker" class="block">
+                    <div class="project-card-premium bg-surface-container/30 border border-white/5 p-6 md:p-8 lg:p-12 transition-all duration-700 hover:border-emerald-500/50 rounded-sm">
+                        <div class="grid grid-cols-1 md:grid-cols-12 gap-6 md:gap-8 items-center">
+                            <div class="md:col-span-5">
+                                <div class="aspect-[4/3] md:aspect-[3/4] overflow-hidden bg-black rounded-sm">
+                                    <img src="./Assets/BQStore.png" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700" alt="Expense Tracker">
+                                </div>
+                            </div>
+                            <div class="md:col-span-7 flex flex-col justify-center">
+                                <span class="font-label-caps text-[9px] md:text-[11px] text-[#7a7878] mb-3 md:mb-4 block tracking-widest">04 / LOGIC</span>
+                                <h2 class="font-headline-md text-3xl md:text-4xl lg:text-5xl uppercase mb-4 md:mb-6 text-white leading-tight">TRACKER</h2>
+                                <p class="font-body-md text-sm md:text-base text-[#c4c7c7] mb-6 md:mb-8">Real-time financial logging with interactive charts.</p>
+                                <div class="flex flex-wrap gap-2 mb-6 md:mb-8">
+                                    <span class="px-3 py-1.5 rounded-full border border-white/10 text-[9px] md:text-[10px] tracking-wider text-white/60">JAVASCRIPT</span>
+                                    <span class="px-3 py-1.5 rounded-full border border-white/10 text-[9px] md:text-[10px] tracking-wider text-white/60">CSS3</span>
+                                </div>
+                                <span class="material-symbols-outlined text-3xl md:text-4xl text-emerald-500 transition-transform group-hover:translate-x-2">arrow_right_alt</span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Project 05: Task Flow (AI Automation) -->
+                <a href="Archive.html#ai-automation" class="block">
+                    <div class="project-card-premium bg-surface-container/30 border border-white/5 p-6 md:p-8 lg:p-12 transition-all duration-700 hover:border-emerald-500/50 rounded-sm">
+                        <div class="grid grid-cols-1 md:grid-cols-12 gap-6 md:gap-8 items-center">
+                            <div class="md:col-span-5">
+                                <div class="aspect-[4/3] md:aspect-[3/4] overflow-hidden bg-black rounded-sm">
+                                    <img src="https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?auto=format&fit=crop&q=80&w=800" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700" alt="ToDo">
+                                </div>
+                            </div>
+                            <div class="md:col-span-7 flex flex-col justify-center">
+                                <span class="font-label-caps text-[9px] md:text-[11px] text-[#7a7878] mb-3 md:mb-4 block tracking-widest">05 / CORE</span>
+                                <h2 class="font-headline-md text-3xl md:text-4xl lg:text-5xl uppercase mb-4 md:mb-6 text-white leading-tight">TASK FLOW</h2>
+                                <p class="font-body-md text-sm md:text-base text-[#c4c7c7] mb-6 md:mb-8">Advanced task management system with n8n automation.</p>
+                                <div class="flex flex-wrap gap-2 mb-6 md:mb-8">
+                                    <span class="px-3 py-1.5 rounded-full border border-white/10 text-[9px] md:text-[10px] tracking-wider text-white/60">PHP</span>
+                                    <span class="px-3 py-1.5 rounded-full border border-white/10 text-[9px] md:text-[10px] tracking-wider text-white/60">N8N</span>
+                                </div>
+                                <span class="material-symbols-outlined text-3xl md:text-4xl text-emerald-500 transition-transform group-hover:translate-x-2">arrow_right_alt</span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </section>
+
+        <!-- Final CTA Section -->
+        <section class="px-safe-margin max-w-container-max mx-auto mb-16 md:mb-section-gap">
+            <div class="mt-16 md:mt-section-gap flex flex-col items-center border-y border-white/5 py-16 md:py-32 bg-gradient-to-b from-transparent via-white/[0.02] to-transparent">
+                
+                <!-- Subtle Label -->
+                <span class="font-label-caps text-[10px] md:text-xs text-emerald-500 mb-6 md:mb-10 uppercase tracking-[0.6em] animate-pulse text-center">
+                    Available for Freelance
+                </span>
+
+                <h2 class="font-label-caps text-[10px] md:text-sm text-white/40 mb-8 md:mb-12 uppercase tracking-[0.2em] md:tracking-[0.4em] text-center max-w-xs md:max-w-md leading-relaxed md:leading-loose px-4">
+                    Ready to bring technical logic <br class="hidden md:block"/> to your next digital vision?
+                </h2>
+
+                <!-- Main Magnetic Link -->
+                <a href="./Contact.html" class="group relative inline-block text-center w-full px-4">
+                    <h3 class="font-display-lg text-4xl sm:text-6xl md:text-[10vw] lg:text-[120px] leading-none transition-all duration-700 ease-out group-hover:scale-105">
+                        <span class="block group-hover:hidden">LET'S CONNECT</span>
+                        <span class="hidden group-hover:block text-transparent text-stroke md:text-stroke-1" style="-webkit-text-stroke-color: #10b981;">LET'S CONNECT</span>
+                    </h3>
+                    
+                    <!-- Underline Animation -->
+                    <div class="mt-4 md:mt-8 w-0 h-[1px] md:h-[2px] bg-emerald-500 mx-auto group-hover:w-[80%] md:group-hover:w-full transition-all duration-700"></div>
+                </a>
+
+                <!-- Location/Status Tag -->
+                <div class="mt-10 md:mt-16 flex items-center gap-3 md:gap-4 text-white/20 font-label-caps text-[8px] md:text-[9px] tracking-widest">
+                    <span class="w-1.5 h-1.5 md:w-2 md:h-2 bg-emerald-500 rounded-full"></span>
+                    BASED IN SAHIWAL, PK
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Navigation Drawer -->
+    <aside id="nav-drawer" aria-hidden="true" role="navigation" class="fixed right-0 top-0 h-full w-full sm:w-[400px] bg-[#080808] border-l border-white/10 z-[60] transform translate-x-full transition-transform duration-700 ease-in-out">
+        <div class="flex flex-col justify-center gap-8 md:gap-12 p-8 md:p-12 h-full relative">
+            <div class="absolute top-8 left-8 right-8 flex justify-between items-center">
+                <div class="text-white/40 font-label-caps tracking-widest text-[10px] md:text-xs">NAVIGATION</div>
+                <button id="menu-close" class="material-symbols-outlined text-white text-2xl hover:text-emerald-400 transition-colors">close</button>
+            </div>
+            
+            <nav class="flex flex-col gap-6 md:gap-8 mt-12">
+                <a class="font-['Plus_Jakarta_Sans'] text-3xl md:text-4xl font-light uppercase tracking-widest text-white/30 hover:text-white hover:pl-6 transition-all duration-700" href="./Index.html">Home</a>
+                <a class="font-['Plus_Jakarta_Sans'] text-3xl md:text-4xl font-light uppercase tracking-widest text-white pl-4 border-l-2 border-white hover:pl-6 transition-all duration-700" href="./Works.html">Work</a>
+                <a class="font-['Plus_Jakarta_Sans'] text-3xl md:text-4xl font-light uppercase tracking-widest text-white/30 hover:text-white/80 hover:pl-6 transition-all duration-700" href="./About.html">About</a>
+                <a class="font-['Plus_Jakarta_Sans'] text-3xl md:text-4xl font-light uppercase tracking-widest text-white/30 hover:text-white/80 hover:pl-6 transition-all duration-700" href="./Contact.html">Contact</a>
+            </nav>
+        </div>
+    </aside>
+
+    <!-- Footer Section -->
+    <footer itemscope itemtype="https://schema.org/Person" class="bg-[#080808] py-12 md:py-24 border-t border-white/5 px-6 md:px-safe-margin">
+        <div class="max-w-[1440px] mx-auto">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-start">
+                
+                <!-- Column 1: Brand & Location -->
+                <div class="lg:col-span-4">
+                    <span itemprop="name" class="font-['Plus_Jakarta_Sans'] text-xl md:text-2xl font-black tracking-tighter text-white block mb-4">PORTFOLIO</span>
+                    <p class="text-white/40 text-xs md:text-sm max-w-xs mb-8 leading-relaxed">
+                        Crafting digital excellence through academic precision and creative development. Based in 
+                        <span itemprop="address" itemscope itemtype="https://schema.org/PostalAddress">
+                            <span itemprop="addressLocality">Sahiwal</span>, <span itemprop="addressRegion">Pakistan</span>.
+                        </span>
+                    </p>
+                    <!-- Availability Indicator -->
+                    <div class="flex items-center gap-2">
+                        <span class="relative flex h-2 w-2">
+                            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+                            <span class="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
+                        </span>
+                        <span class="text-[9px] md:text-[10px] font-bold text-white/60 tracking-widest uppercase">Available for new projects</span>
+                    </div>
+                </div>
+
+                <!-- Column 2: Quick Links -->
+                <div class="lg:col-span-4 grid grid-cols-2 gap-8">
+                    <div>
+                        <h4 class="text-white font-bold text-[10px] md:text-xs tracking-widest uppercase mb-4 md:mb-6">Explore</h4>
+                        <nav class="flex flex-col gap-3 md:gap-4">
+                            <a href="./Index.html" class="text-white/40 hover:text-white text-xs md:text-sm transition-colors">Home</a>
+                            <a href="./Works.html" class="text-white/40 hover:text-white text-xs md:text-sm transition-colors">Work</a>
+                            <a href="./About.html" class="text-white/40 hover:text-white text-xs md:text-sm transition-colors">About</a>
+                        </nav>
+                    </div>
+                    <div>
+                        <h4 class="text-white font-bold text-[10px] md:text-xs tracking-widest uppercase mb-4 md:mb-6">Connect</h4>
+                        <nav class="flex flex-col gap-3 md:gap-4">
+                            <a href="https://www.linkedin.com/in/noor-khan-92190a3b5" itemprop="sameAs" aria-label="LinkedIn Profile" class="text-white/40 hover:text-white text-xs md:text-sm transition-colors">LinkedIn</a>
+                            <a href="https://github.com/Humaira-NoorDev" itemprop="sameAs" aria-label="GitHub Profile" class="text-white/40 hover:text-white text-xs md:text-sm transition-colors">GitHub</a>
+                            <a href="mailto:humairanoor.dev@gmail.com" itemprop="email" class="text-white/40 hover:text-white text-xs md:text-sm transition-colors">Email</a>
+                        </nav>
+                    </div>
+                </div>
+
+                <!-- Column 3: Contact/CTA -->
+                <div class="lg:col-span-4 flex flex-col lg:items-end mt-4 lg:mt-0">
+                    <h4 class="text-white font-bold text-[10px] md:text-xs tracking-widest uppercase mb-4 md:mb-6">Start a conversation</h4>
+                    <a href="./Contact.html" class="group flex items-center gap-4 bg-white/[0.03] border border-white/10 px-6 py-4 rounded-full hover:bg-white/10 transition-all w-full md:w-fit justify-between">
+                        <span class="text-white text-xs md:text-sm font-medium">hello@yourportfolio.com</span>
+                        <span class="material-symbols-outlined text-white text-sm group-hover:translate-x-1 transition-transform">arrow_forward</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Bottom Copyright -->
+            <div class="mt-16 md:mt-24 pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-6">
+                <p class="text-white/20 text-[9px] md:text-[10px] tracking-widest uppercase text-center md:text-left">
+                    &copy; 2026 Humaira Noor. All rights reserved.
+                </p>
+                <div class="flex gap-6 md:gap-8">
+                    <a href="#" class="text-white/20 hover:text-white text-[9px] md:text-[10px] tracking-widest uppercase transition-colors">Privacy Policy</a>
+                    <a href="#" class="text-white/20 hover:text-white text-[9px] md:text-[10px] tracking-widest uppercase transition-colors">Terms</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Custom cursor logic
+        const cursor = document.querySelector('.custom-cursor');
+        const dot = document.querySelector('.dot');
+        
+        // Only run cursor logic on non-touch devices
+        if (window.matchMedia("(pointer: fine)").matches) {
+            document.addEventListener('mousemove', (e) => {
+                cursor.style.left = e.clientX - 10 + 'px';
+                cursor.style.top = e.clientY - 10 + 'px';
+                dot.style.left = e.clientX - 2 + 'px';
+                dot.style.top = e.clientY - 2 + 'px';
+            });
+
+            document.querySelectorAll('a, button, .project-card-premium, #menu-open, #menu-close').forEach(el => {
+                el.addEventListener('mouseenter', () => {
+                    cursor.style.transform = 'scale(2.5)';
+                    cursor.style.background = 'rgba(255, 255, 255, 0.1)';
+                });
+                el.addEventListener('mouseleave', () => {
+                    cursor.style.transform = 'scale(1)';
+                    cursor.style.background = 'transparent';
+                });
+            });
+        }
+
+        // Mobile Menu Logic
+        const menuOpenBtn = document.getElementById('menu-open');
+        const menuCloseBtn = document.getElementById('menu-close');
+        const navDrawer = document.getElementById('nav-drawer');
+
+        menuOpenBtn.addEventListener('click', () => {
+            navDrawer.classList.remove('translate-x-full');
+        });
+
+        menuCloseBtn.addEventListener('click', () => {
+            navDrawer.classList.add('translate-x-full');
+        });
+
+        // Horizontal Scroll Setup
+        const track = document.querySelector('.project-track');
+        const wrapper = document.querySelector('.project-slider-wrapper');
+
+        // Edge-Hover Auto Scroll (Only runs accurately on fine pointing devices/desktops)
+        if (window.matchMedia("(pointer: fine)").matches) {
+            wrapper.addEventListener('mousemove', (e) => {
+                const rect = wrapper.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const width = rect.width;
+
+                if (x > width * 0.85) {
+                    track.scrollBy({ left: 15, behavior: 'auto' });
+                } else if (x < width * 0.15) {
+                    track.scrollBy({ left: -15, behavior: 'auto' });
+                }
+            });
+
+            // Smooth Drag-to-Scroll (Desktop)
+            let isDown = false;
+            let startX;
+            let scrollLeft;
+
+            track.addEventListener('mousedown', (e) => {
+                isDown = true;
+                startX = e.pageX - track.offsetLeft;
+                scrollLeft = track.scrollLeft;
+                track.style.cursor = 'grabbing';
+            });
+
+            track.addEventListener('mouseleave', () => {
+                isDown = false;
+                track.style.cursor = 'auto'; // Fallback correctly if cursor script overrides
+            });
+
+            track.addEventListener('mouseup', () => {
+                isDown = false;
+                track.style.cursor = 'auto';
+            });
+
+            track.addEventListener('mousemove', (e) => {
+                if (!isDown) return;
+                e.preventDefault();
+                const x = e.pageX - track.offsetLeft;
+                const walk = (x - startX) * 2; 
+                track.scrollLeft = scrollLeft - walk;
+            });
+        }
+    </script>
+</body>
+</html>
