@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html class="dark" lang="en">
+    <head>
+        <meta charset="utf-8"/>
+        <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+        <!-- Primary SEO Tags -->
+        <title>Contact - PORTFOLIO</title>
+        <meta name="title" content="Your Primary Keyword - Catchy Brand Name">
+        <meta name="description" content="A brief, compelling summary of your page (150-160 characters) to encourage users to click from search results.">
+        <meta name="keywords" content="keyword1, keyword2, keyword3">
+        <meta name="robots" content="index, follow">
+        <link rel="canonical" href="https://www.yourdomain.com/page-url" />
+
+        <!-- Open Graph / Facebook -->
+        <meta property="og:type" content="website">
+        <meta property="og:url" content="https://www.yourdomain.com/">
+        <meta property="og:title" content="Your Primary Keyword - Catchy Brand Name">
+        <meta property="og:description" content="A brief, compelling summary of your page for social media audiences.">
+        <meta property="og:image" content="https://www.yourdomain.com/og-image.jpg">
+
+        <!-- Twitter -->
+        <meta property="twitter:card" content="summary_large_image">
+        <meta property="twitter:url" content="https://www.yourdomain.com/">
+        <meta property="twitter:title" content="Your Primary Keyword - Catchy Brand Name">
+        <meta property="twitter:description" content="A brief, compelling summary of your page for Twitter.">
+        <meta property="twitter:image" content="https://www.yourdomain.com/og-image.jpg">
+
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+        <script type="text/javascript">
+            (function(){
+                emailjs.init("f60toC9Bs20AIQrgm");
+            })();
+        </script>
+
+        <!-- Existing Assets -->
+        <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+        <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;700;800;900&amp;family=Inter:wght@400;600&amp;display=swap" rel="stylesheet"/>
+        <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+        
+        <script id="tailwind-config">
+            tailwind.config = {
+                darkMode: "class",
+                theme: {
+                    extend: {
+                        "colors": {
+                            "on-primary-fixed": "#1c1b1b",
+                            "on-error-container": "#ffdad6",
+                            "surface-container-high": "#2b2a2a",
+                            "primary-fixed": "#e5e2e1",
+                            "background": "#141313",
+                            "tertiary": "#cac5c3",
+                            "on-primary-fixed-variant": "#474646",
+                            "inverse-on-surface": "#313030",
+                            "on-tertiary": "#32302e",
+                            "secondary-fixed-dim": "#c9c6c5",
+                            "on-secondary-container": "#b7b4b4",
+                            "on-primary": "#313030",
+                            "error-container": "#93000a",
+                            "on-surface": "#e5e2e1",
+                            "secondary": "#c9c6c5",
+                            "inverse-surface": "#e5e2e1",
+                            "tertiary-fixed": "#e7e1df",
+                            "on-surface-variant": "#c4c7c7",
+                            "error": "#ffb4ab",
+                            "surface-container-low": "#1c1b1b",
+                            "surface-tint": "#c9c6c5",
+                            "on-tertiary-fixed": "#1d1b1a",
+                            "outline": "#8e9192",
+                            "on-primary-container": "#7a7878",
+                            "surface": "#141313",
+                            "surface-bright": "#3a3939",
+                            "on-tertiary-container": "#7b7876",
+                            "tertiary-fixed-dim": "#cac5c3",
+                            "on-secondary-fixed": "#1c1b1b",
+                            "on-secondary-fixed-variant": "#484646",
+                            "on-background": "#e5e2e1",
+                            "on-secondary": "#313030",
+                            "surface-dim": "#141313",
+                            "secondary-fixed": "#e5e2e1",
+                            "on-tertiary-fixed-variant": "#494645",
+                            "surface-container-lowest": "#0e0e0e",
+                            "tertiary-container": "#090807",
+                            "on-error": "#690005",
+                            "primary-fixed-dim": "#c9c6c5",
+                            "surface-variant": "#353434",
+                            "inverse-primary": "#5f5e5e",
+                            "surface-container-highest": "#353434",
+                            "secondary-container": "#484646",
+                            "primary": "#c9c6c5",
+                            "surface-container": "#201f1f",
+                            "primary-container": "#080808",
+                            "outline-variant": "#444748"
+                        },
+                        "borderRadius": {
+                            "DEFAULT": "0.25rem",
+                            "lg": "0.5rem",
+                            "xl": "0.75rem",
+                            "full": "9999px"
+                        },
+                        "spacing": {
+                            "element-gap": "4rem",
+                            "section-gap": "12rem",
+                            "grid-gutter": "2rem",
+                            "safe-margin": "5vw",
+                            "container-max": "1440px"
+                        },
+                        "fontFamily": {
+                            "body-md": ["Inter"],
+                            "body-lg": ["Inter"],
+                            "display-lg": ["Plus Jakarta Sans"],
+                            "headline-md": ["Plus Jakarta Sans"],
+                            "display-xl": ["Plus Jakarta Sans"],
+                            "label-caps": ["Inter"]
+                        },
+                        "fontSize": {
+                            "body-md": ["16px", {"lineHeight": "1.6", "letterSpacing": "0", "fontWeight": "400"}],
+                            "body-lg": ["20px", {"lineHeight": "1.6", "letterSpacing": "-0.01em", "fontWeight": "400"}],
+                            "display-lg": ["120px", {"lineHeight": "0.95", "letterSpacing": "-0.04em", "fontWeight": "800"}],
+                            "headline-md": ["64px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                            "display-xl": ["160px", {"lineHeight": "0.9", "letterSpacing": "-0.05em", "fontWeight": "800"}],
+                            "label-caps": ["12px", {"lineHeight": "1", "letterSpacing": "0.1em", "fontWeight": "600"}]
+                        }
+                    },
+                },
+            }
+        </script>
+        
+        <style>
+            body{
+                min-height: max(884px, 100dvh);
+            }
+            .material-symbols-outlined {
+                font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            }
+            .text-stroke-hover:hover {
+                -webkit-text-stroke: 1px rgba(255, 255, 255, 0.4);
+                color: transparent;
+            }
+            input:-webkit-autofill,
+            input:-webkit-autofill:hover, 
+            input:-webkit-autofill:focus {
+                -webkit-text-fill-color: #e5e2e1;
+                -webkit-box-shadow: 0 0 0px 1000px #080808 inset;
+                transition: background-color 5000s ease-in-out 0s;
+            }
+        </style>
+    </head>
+    
+    <body class="bg-primary-container text-on-background selection:bg-white selection:text-black">
+        
+        <!-- Floating Rounded Capsule Header -->
+        <header class="fixed top-6 left-1/2 -translate-x-1/2 z-50 w-[calc(100%-2rem)] max-w-[1440px] bg-[#080808]/80 backdrop-blur-md border border-white/10 rounded-full px-6 py-4">
+            <div class="flex justify-between items-center w-full">
+                
+                <!-- Left Section: Mobile Toggle Trigger BEFORE Logo -->
+                <div class="flex items-center gap-4">
+                    <!-- Mobile Hamburger Menu Icon (Visible only on mobile/tablet) -->
+                    <button id="menu-open" class="md:hidden text-white focus:outline-none flex items-center hover:text-emerald-400 transition-colors">
+                        <span class="material-symbols-outlined text-2xl">menu</span>
+                    </button>
+
+                    <!-- Logo -->
+                    <div class="text-xl font-black tracking-tighter text-white font-['Plus_Jakarta_Sans']">
+                        PORTFOLIO
+                    </div>
+                </div>
+
+                <!-- Desktop Navigation (Center/Right) -->
+                <nav class="hidden md:flex gap-8 items-center">
+                    <a class="font-['Plus_Jakarta_Sans'] tracking-[0.2em] uppercase text-xs font-bold text-white/40 hover:text-white transition-all duration-500 ease-out" href="./Index.html">Home</a>
+                    <a class="font-['Plus_Jakarta_Sans'] tracking-[0.2em] uppercase text-xs font-bold text-white/40 hover:text-white transition-all duration-500 ease-out" href="./Works.html">Work</a>
+                    <a class="font-['Plus_Jakarta_Sans'] tracking-[0.2em] uppercase text-xs font-bold text-white/40 hover:text-white transition-all duration-500 ease-out" href="./About.html">About</a>
+                </nav>
+
+                <!-- Get In Touch Action Button -->
+                <div>
+                    <a href="./Contact.html">
+                        <button class="font-['Plus_Jakarta_Sans'] tracking-[0.2em] uppercase text-xs font-bold text-[#080808] bg-white px-5 py-2.5 rounded-full hover:bg-opacity-90 hover:scale-105 active:scale-95 transition-all duration-300 ease-out shadow-[0_0_20px_rgba(255,255,255,0.15)]">
+                            Get In Touch
+                        </button>
+                    </a>
+                </div>
+            </div>
+        </header>
+
+        <!-- Right-to-Left Sliding Navigation Drawer -->
+        <aside id="nav-drawer" aria-hidden="true" role="navigation" class="fixed right-0 top-0 h-full w-full sm:w-[400px] bg-[#080808] border-l border-white/10 z-[60] transform translate-x-full transition-transform duration-700 ease-in-out">
+            <div class="flex flex-col justify-center gap-8 md:gap-12 p-8 md:p-12 h-full relative">
+                <div class="absolute top-8 left-8 right-8 flex justify-between items-center">
+                    <div class="text-white/40 font-label-caps tracking-widest text-[10px] md:text-xs">NAVIGATION</div>
+                    <button id="menu-close" class="material-symbols-outlined text-white text-2xl hover:text-emerald-400 transition-colors">close</button>
+                </div>
+                
+                <nav class="flex flex-col gap-6 md:gap-8 mt-12">
+                    <a class="font-['Plus_Jakarta_Sans'] text-3xl md:text-4xl font-light uppercase tracking-widest text-white/30 hover:text-white hover:pl-6 transition-all duration-700" href="./Index.html">Home</a>
+                    <a class="font-['Plus_Jakarta_Sans'] text-3xl md:text-4xl font-light uppercase tracking-widest text-white/30 hover:text-white hover:pl-6 transition-all duration-700" href="./Works.html">Work</a>
+                    <a class="font-['Plus_Jakarta_Sans'] text-3xl md:text-4xl font-light uppercase tracking-widest text-white/30 hover:text-white hover:pl-6 transition-all duration-700" href="./About.html">About</a>
+                    <a class="font-['Plus_Jakarta_Sans'] text-3xl md:text-4xl font-light uppercase tracking-widest text-white pl-4 border-l-2 border-white hover:pl-6 transition-all duration-700" href="./Contact.html">Contact</a>
+                </nav>
+            </div>
+        </aside>
+
+        <!-- Main Content Section -->
+        <main id="main-content" role="main" class="pt-40 px-safe-margin max-w-[1440px] mx-auto overflow-x-hidden" itemscope itemtype="https://schema.org/ContactPage">
+            
+            <section class="mb-section-gap">
+                <div class="grid grid-cols-12 gap-grid-gutter">
+                    <div class="col-span-12 md:col-span-10">
+                        <h1 class="font-display-xl text-5xl md:text-7xl lg:text-display-xl uppercase mb-8 text-white leading-[0.85]">
+                            GET IN<br/>TOUCH
+                        </h1>
+                        <p class="font-body-lg text-lg md:text-body-lg text-white/50 max-w-2xl mb-element-gap leading-relaxed">
+                            Available for select freelance opportunities and technical consultations. Let's build something technically superior.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Form & Sidebar Grid -->
+                <div class="grid grid-cols-12 gap-grid-gutter mt-12 md:mt-element-gap">
+                    
+                    <!-- Left: Contact Form -->
+                    <div class="col-span-12 md:col-span-7">
+                        <form id="contact-form" class="flex flex-col gap-10 md:gap-12">
+                            <div class="group relative">
+                                <label for="name" class="font-label-caps text-label-caps text-white/50 uppercase block mb-2 transition-all group-focus-within:text-white">Name</label>
+                                <input id="name" name="name" class="w-full bg-transparent border-t-0 border-x-0 border-b border-white/20 focus:border-white focus:ring-0 text-lg md:text-body-lg font-body-lg text-white py-4 transition-all outline-none placeholder:text-white/10" placeholder="John Doe" required type="text"/>
+                            </div>
+
+                            <div class="group relative">
+                                <label for="email" class="font-label-caps text-label-caps text-white/50 uppercase block mb-2 transition-all group-focus-within:text-white">Email Address</label>
+                                <input id="email" name="email" class="w-full bg-transparent border-t-0 border-x-0 border-b border-white/20 focus:border-white focus:ring-0 text-lg md:text-body-lg font-body-lg text-white py-4 transition-all outline-none placeholder:text-white/10" placeholder="hello@example.com" required type="email"/>
+                            </div>
+
+                            <div class="group relative">
+                                <label for="message" class="font-label-caps text-label-caps text-white/50 uppercase block mb-2 transition-all group-focus-within:text-white">Message</label>
+                                <textarea id="message" name="message" class="w-full bg-transparent border-t-0 border-x-0 border-b border-white/20 focus:border-white focus:ring-0 text-lg md:text-body-lg font-body-lg text-white py-4 transition-all outline-none resize-none placeholder:text-white/10" placeholder="Tell me about your project..." required rows="4"></textarea>
+                            </div>
+
+                            <div class="mt-8">
+                                <button class="w-full md:w-auto bg-white text-black px-12 py-6 font-label-caps text-label-caps uppercase tracking-widest hover:bg-white/90 active:scale-95 transition-all duration-300 flex items-center justify-between md:justify-center gap-4 group" type="submit">
+                                    Send Message
+                                    <span class="material-symbols-outlined group-hover:translate-x-2 transition-transform">arrow_forward</span>
+                                </button>
+                            </div>
+                        </form>
+                    </div> 
+
+                    <!-- Right: Sidebar -->
+                    <div class="col-span-12 md:col-span-4 md:col-start-9 mt-20 md:mt-0">
+                        <div class="md:sticky md:top-40">
+                            <h2 class="font-label-caps text-label-caps text-white/30 uppercase mb-8 tracking-[0.3em]">Quick Channels</h2>
+                            <ul class="flex flex-col gap-8">
+                                <li>
+                                    <a class="group flex items-end justify-between border-b border-white/10 pb-4 hover:border-white transition-all duration-500" href="https://www.fiverr.com/humairanoor_dev/buying?" aria-label="Fiverr Profile">
+                                        <span class="font-headline-md text-2xl md:text-[32px] font-light uppercase tracking-wider group-hover:pl-4 transition-all duration-500 text-white">Fiverr</span>
+                                        <span class="material-symbols-outlined text-white/30 group-hover:text-white">open_in_new</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="group flex items-end justify-between border-b border-white/10 pb-4 hover:border-white transition-all duration-500" href="https://www.upwork.com/freelancers/~01331f6d9f952abfcc" aria-label="Upwork Profile">
+                                        <span class="font-headline-md text-2xl md:text-[32px] font-light uppercase tracking-wider group-hover:pl-4 transition-all duration-500 text-white">Upwork</span>
+                                        <span class="material-symbols-outlined text-white/30 group-hover:text-white">open_in_new</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="group flex items-end justify-between border-b border-white/10 pb-4 hover:border-white transition-all duration-500" href="https://www.linkedin.com/in/noor-khan-92190a3b5?utm_source=share_via&utm_content=profile&utm_medium=member_android" aria-label="Send Email">
+                                        <span class="font-headline-md text-2xl md:text-[32px] font-light uppercase tracking-wider group-hover:pl-4 transition-all duration-500 text-white">LinkedIn</span>
+                                        <span class="material-symbols-outlined text-white/30 group-hover:text-white">open_in_new</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="group flex items-end justify-between border-b border-white/10 pb-4 hover:border-white transition-all duration-500" href="mailto:humairanoor.dev@gmail.com" aria-label="Send Email">
+                                        <span class="font-headline-md text-2xl md:text-[32px] font-light uppercase tracking-wider group-hover:pl-4 transition-all duration-500 text-white">Mail</span>
+                                        <span class="material-symbols-outlined text-white/30 group-hover:text-white">alternate_email</span>
+                                    </a>
+                                </li>
+                            </ul>
+
+                            <!-- Visual Asset -->
+                            <div class="mt-20">
+                                <div class="h-48 w-full bg-[#121212] overflow-hidden group grayscale hover:grayscale-0 transition-all duration-1000 border border-white/5">
+                                    <img class="w-full h-full object-cover opacity-40 group-hover:scale-110 transition-transform duration-[2s]" alt="Focused professional workstation" src="https://images.unsplash.com/photo-1547082299-de196ea013d6?q=80&w=600&auto=format&fit=crop" />
+                                </div>
+                                <p class="font-label-caps text-[10px] text-white/30 uppercase mt-4 tracking-widest text-right">Based in Sahiwal, Global availability.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Bottom Technical Specs Section -->
+            <section class="mb-section-gap">
+                <div class="grid grid-cols-12 gap-grid-gutter">
+                    <div class="col-span-12 h-[1px] bg-white/10 mb-20"></div>
+                    <div class="col-span-12 md:col-span-4">
+                        <h3 class="font-label-caps text-label-caps text-white uppercase tracking-widest mb-6">Inquiries</h3>
+                        <p class="font-body-md text-sm md:text-body-md text-white/50 leading-relaxed">For complex architectural reviews or long-term partnerships, please provide documentation.</p>
+                    </div>
+                    <div class="col-span-12 md:col-span-4">
+                        <h3 class="font-label-caps text-label-caps text-white uppercase tracking-widest mb-6">Timezone</h3>
+                        <p class="font-body-md text-sm md:text-body-md text-white/50 leading-relaxed">Operating on PKT (UTC+5). Typical response window: 24-48 hours excluding weekends.</p>
+                    </div>
+                    <div class="col-span-12 md:col-span-4">
+                        <h3 class="font-label-caps text-label-caps text-white uppercase tracking-widest mb-6">Security</h3>
+                        <p class="font-body-md text-sm md:text-body-md text-white/50 leading-relaxed">PGP encryption available upon request for high-security projects and NDA discussions.</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer Section -->
+        <footer itemscope itemtype="https://schema.org/Person" class="bg-[#080808] py-16 md:py-24 border-t border-white/5 px-6 md:px-safe-margin">
+            <div class="max-w-[1440px] mx-auto">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-start">
+                    
+                    <!-- Column 1: Brand & Location -->
+                    <div class="lg:col-span-4">
+                        <span itemprop="name" class="font-['Plus_Jakarta_Sans'] text-2xl font-black tracking-tighter text-white block mb-4">PORTFOLIO</span>
+                        <p class="text-white/40 text-sm max-w-xs mb-8 leading-relaxed">
+                            Crafting digital excellence through academic precision and creative development. Based in 
+                            <span itemprop="address" itemscope itemtype="https://schema.org/PostalAddress">
+                                <span itemprop="addressLocality">Sahiwal</span>, <span itemprop="addressRegion">Pakistan</span>.
+                            </span>
+                        </p>
+                        <div class="flex items-center gap-2">
+                            <span class="relative flex h-2 w-2">
+                                <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+                                <span class="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
+                            </span>
+                            <span class="text-[10px] font-bold text-white/60 tracking-widest uppercase">Available for new projects</span>
+                        </div>
+                    </div>
+
+                    <!-- Column 2: Quick Links -->
+                    <div class="lg:col-span-4 grid grid-cols-2 gap-8">
+                        <div>
+                            <h4 class="text-white font-bold text-xs tracking-widest uppercase mb-6">Explore</h4>
+                            <nav class="flex flex-col gap-4">
+                                <a href="./Index.html" class="text-white/40 hover:text-white text-sm transition-colors">Home</a>
+                                <a href="./Works.html" class="text-white/40 hover:text-white text-sm transition-colors">Work</a>
+                                <a href="./About.html" class="text-white/40 hover:text-white text-sm transition-colors">About</a>
+                            </nav>
+                        </div>
+                        <div>
+                            <h4 class="text-white font-bold text-xs tracking-widest uppercase mb-6">Connect</h4>
+                            <nav class="flex flex-col gap-4">
+                                <a href="https://www.linkedin.com/in/noor-khan-92190a3b5?utm_source=share_via&utm_content=profile&utm_medium=member_android" itemprop="sameAs" aria-label="LinkedIn Profile" class="text-white/40 hover:text-white text-sm transition-colors">LinkedIn</a>
+                                <a href="https://github.com/Humaira-NoorDev" itemprop="sameAs" aria-label="GitHub Profile" class="text-white/40 hover:text-white text-sm transition-colors">GitHub</a>
+                                <a href="mailto:humairanoor.dev@gmail.com" itemprop="email" class="text-white/40 hover:text-white text-sm transition-colors">Email</a>
+                            </nav>
+                        </div>
+                    </div>
+
+                    <!-- Column 3: Contact/CTA -->
+                    <div class="lg:col-span-4 flex flex-col lg:items-end">
+                        <h4 class="text-white font-bold text-xs tracking-widest uppercase mb-6">Start a conversation</h4>
+                        <a href="./Contact.html" class="group flex items-center gap-4 bg-white/[0.03] border border-white/10 px-6 py-4 rounded-full hover:bg-white/10 transition-all w-fit">
+                            <span class="text-white text-sm font-medium">hello@yourportfolio.com</span>
+                            <span class="material-symbols-outlined text-white text-sm group-hover:translate-x-1 transition-transform">arrow_forward</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Bottom Copyright -->
+                <div class="mt-16 md:mt-24 pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-6">
+                    <p class="text-white/20 text-[10px] tracking-widest uppercase">
+                        &copy; 2026 Humaira Noor. All rights reserved.
+                    </p>
+                    <div class="flex gap-8">
+                        <a href="#" class="text-white/20 hover:text-white text-[10px] tracking-widest uppercase transition-colors">Privacy Policy</a>
+                        <a href="#" class="text-white/20 hover:text-white text-[10px] tracking-widest uppercase transition-colors">Terms</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <!-- Navigation Drawer & Form Scripts -->
+        <script type="text/javascript">
+            // 1. Mobile Menu Drawer Logic (Right to Left Slide)
+            const menuOpenBtn = document.getElementById('menu-open');
+            const menuCloseBtn = document.getElementById('menu-close');
+            const navDrawer = document.getElementById('nav-drawer');
+
+            menuOpenBtn.addEventListener('click', () => {
+                navDrawer.classList.remove('translate-x-full');
+            });
+
+            menuCloseBtn.addEventListener('click', () => {
+                navDrawer.classList.add('translate-x-full');
+            });
+
+            // 2. EmailJS Form Handling
+            const contactForm = document.getElementById('contact-form');
+
+            contactForm.addEventListener('submit', function(event) {
+                event.preventDefault();
+
+                const name = contactForm.querySelector('input[name="name"]').value.trim();
+                const email = contactForm.querySelector('input[name="email"]').value.trim();
+                const message = contactForm.querySelector('textarea[name="message"]').value.trim();
+
+                if (name.length < 3) {
+                    alert("Please enter your full name.");
+                    return;
+                }
+
+                const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                if (!emailPattern.test(email)) {
+                    alert("Please enter a valid professional email address.");
+                    return;
+                }
+
+                if (message.length < 10) {
+                    alert("Please provide a bit more detail about your project.");
+                    return;
+                }
+
+                const btn = contactForm.querySelector('button[type="submit"]');
+                const originalContent = btn.innerHTML;
+                
+                btn.innerHTML = 'SENDING...';
+                btn.style.opacity = '0.5';
+                btn.style.pointerEvents = 'none';
+                btn.disabled = true;
+
+                emailjs.sendForm('service_9n3hki9', 'template_m9qpk87', this)
+                .then(function() {
+                    alert('Message Sent Successfully!');
+                    contactForm.reset();
+                }, function(error) {
+                    alert('Failed to send... ' + JSON.stringify(error));
+                })
+                .finally(function() {
+                    btn.innerHTML = originalContent;
+                    btn.style.opacity = '1';
+                    btn.style.pointerEvents = 'auto';
+                    btn.disabled = false;
+                });
+            });
+        </script>
+    </body>
+</html>
