@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Project Details — PORTFOLIO</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;700;800&amp;family=Inter:wght@400;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "on-primary-fixed": "#1c1b1b",
+                      "on-error-container": "#ffdad6",
+                      "surface-container-high": "#2b2a2a",
+                      "primary-fixed": "#e5e2e1",
+                      "background": "#141313",
+                      "tertiary": "#cac5c3",
+                      "on-primary-fixed-variant": "#474646",
+                      "inverse-on-surface": "#313030",
+                      "on-tertiary": "#32302e",
+                      "secondary-fixed-dim": "#c9c6c5",
+                      "on-secondary-container": "#b7b4b4",
+                      "on-primary": "#313030",
+                      "error-container": "#93000a",
+                      "on-surface": "#e5e2e1",
+                      "secondary": "#c9c6c5",
+                      "inverse-surface": "#e5e2e1",
+                      "tertiary-fixed": "#e7e1df",
+                      "on-surface-variant": "#c4c7c7",
+                      "error": "#ffb4ab",
+                      "surface-container-low": "#1c1b1b",
+                      "surface-tint": "#c9c6c5",
+                      "on-tertiary-fixed": "#1d1b1a",
+                      "outline": "#8e9192",
+                      "on-primary-container": "#7a7878",
+                      "surface": "#141313",
+                      "surface-bright": "#3a3939",
+                      "on-tertiary-container": "#7b7876",
+                      "tertiary-fixed-dim": "#cac5c3",
+                      "on-secondary-fixed": "#1c1b1b",
+                      "on-secondary-fixed-variant": "#484646",
+                      "on-background": "#e5e2e1",
+                      "on-secondary": "#313030",
+                      "surface-dim": "#141313",
+                      "secondary-fixed": "#e5e2e1",
+                      "on-tertiary-fixed-variant": "#494645",
+                      "surface-container-lowest": "#0e0e0e",
+                      "tertiary-container": "#090807",
+                      "on-error": "#690005",
+                      "primary-fixed-dim": "#c9c6c5",
+                      "surface-variant": "#353434",
+                      "inverse-primary": "#5f5e5e",
+                      "surface-container-highest": "#353434",
+                      "secondary-container": "#484646",
+                      "primary": "#c9c6c5",
+                      "surface-container": "#201f1f",
+                      "primary-container": "#080808",
+                      "outline-variant": "#444748"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "element-gap": "4rem",
+                      "section-gap": "12rem",
+                      "grid-gutter": "2rem",
+                      "safe-margin": "5vw",
+                      "container-max": "1440px"
+              },
+              "fontFamily": {
+                      "body-md": ["Inter"],
+                      "body-lg": ["Inter"],
+                      "display-lg": ["Plus Jakarta Sans"],
+                      "headline-md": ["Plus Jakarta Sans"],
+                      "display-xl": ["Plus Jakarta Sans"],
+                      "label-caps": ["Inter"]
+              },
+              "fontSize": {
+                      "body-md": ["16px", {"lineHeight": "1.6", "letterSpacing": "0", "fontWeight": "400"}],
+                      "body-lg": ["20px", {"lineHeight": "1.6", "letterSpacing": "-0.01em", "fontWeight": "400"}],
+                      "display-lg": ["120px", {"lineHeight": "0.95", "letterSpacing": "-0.04em", "fontWeight": "800"}],
+                      "headline-md": ["64px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                      "display-xl": ["160px", {"lineHeight": "0.9", "letterSpacing": "-0.05em", "fontWeight": "800"}],
+                      "label-caps": ["12px", {"lineHeight": "1", "letterSpacing": "0.1em", "fontWeight": "600"}]
+              }
+            },
+          },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+            display: inline-block;
+            vertical-align: middle;
+        }
+        body {
+            background-color: #080808;
+            color: #e5e2e1;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="overflow-x-hidden">
+  <!-- TopAppBar -->
+<nav class="fixed top-3 sm:top-4 left-1/2 -translate-x-1/2 z-50 w-[95%] max-w-[1440px] bg-white/5 backdrop-blur-md border border-white/10 rounded-full">
+  <div class="flex justify-between items-center w-full px-4 sm:px-6 md:px-8 py-3.5 sm:py-4 md:py-6">
+    <div class="flex items-center gap-2 sm:gap-4">
+      <button id="drawer-open" type="button" aria-label="Open navigation menu" aria-expanded="false" aria-controls="drawer" class="flex items-center justify-center w-9 h-9 -ml-1 text-white cursor-pointer">
+        <span class="material-symbols-outlined">menu</span>
+      </button>
+      <span class="font-['Plus_Jakarta_Sans'] text-base sm:text-lg md:text-xl font-black tracking-tighter text-white">PORTFOLIO</span>
+    </div>
+    
+    <div class="hidden md:flex gap-8 items-center">
+      <a class="font-['Plus_Jakarta_Sans'] tracking-[0.2em] uppercase text-xs font-bold text-white/40 hover:text-white transition-all duration-500 ease-out" href="./Works.html">Work</a>
+      <a class="font-['Plus_Jakarta_Sans'] tracking-[0.2em] uppercase text-xs font-bold text-white border-b border-white pb-1 hover:text-white transition-all duration-500 ease-out" href="./Archive.html">Archive</a>
+      <a class="font-['Plus_Jakarta_Sans'] tracking-[0.2em] uppercase text-xs font-bold text-white/40 hover:text-white transition-all duration-500 ease-out" href="./About.html">About</a>
+    </div>
+
+<!-- CTA Button -->
+    <a href="./Contact.html">
+      <button class="font-['Plus_Jakarta_Sans'] tracking-[0.15em] sm:tracking-[0.2em] uppercase text-[10px] sm:text-xs font-bold text-[#080808] bg-white px-4 sm:px-6 py-2.5 sm:py-3 rounded-full hover:bg-opacity-90 hover:scale-105 active:scale-95 transition-all duration-300 ease-out shadow-[0_0_20px_rgba(255,255,255,0.15)] whitespace-nowrap">
+        <span class="hidden sm:inline">Get In Touch</span>
+        <span class="sm:hidden">Contact</span>
+      </button>
+    </a>
+  </div>
+</nav>
+<!-- Backdrop for nav drawer -->
+<div id="drawer-backdrop" class="fixed inset-0 bg-black/50 z-[55] hidden"></div>
+<main>
+  <!-- Hero Section -->
+  <section class="h-[50vh] sm:h-[55vh] md:h-[60vh] w-full relative overflow-hidden flex items-end pb-12 sm:pb-16 md:pb-20 px-safe-margin">
+    <div class="absolute inset-0 z-0">
+      <div class="absolute inset-0 bg-gradient-to-t from-[#080808] via-[#080808]/40 to-transparent z-10"></div>
+      <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&q=80" 
+           class="w-full h-full object-cover brightness-[0.2]" alt="Archive Header">
+    </div>
+    <div class="relative z-20 w-full max-w-[1440px] mx-auto">
+      <span class="font-label-caps text-emerald-500 tracking-[0.3em] sm:tracking-[0.4em] mb-3 sm:mb-4 block">PROJECT DOCUMENTATION</span>
+      <h1 class="font-display-lg text-5xl sm:text-7xl md:text-8xl lg:text-display-lg text-white leading-none">THE ARCHIVE</h1>
+    </div>
+  </section>
+
+  <!-- Project 01: Medical AI Report Generator -->
+  <section id="medical-ai" class="py-16 sm:py-20 md:py-24 px-safe-margin max-w-[1440px] mx-auto border-t border-white/10">
+    <div class="grid grid-cols-1 md:grid-cols-12 gap-8 sm:gap-10 md:gap-12 items-center">
+      <div class="md:col-span-5">
+        <span class="text-white/40 font-mono text-xs mb-4 block">01 // DESKTOP APPLICATION</span>
+        <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4 sm:mb-6 font-['Plus_Jakarta_Sans']">Medical AI-Assisted Report Generator</h2>
+        <p class="text-white/60 mb-6 sm:mb-8 leading-relaxed text-sm sm:text-base">A high-performance C# WinForms application integrated with MySQL. Designed to streamline medical reporting workflows using AI-driven data synthesis.</p>
+        <div class="flex flex-wrap gap-2 sm:gap-3 mb-8 sm:mb-10">
+          <span class="text-[10px] border border-emerald-500/30 px-3 py-1 rounded text-emerald-400">C# / .NET</span>
+          <span class="text-[10px] border border-emerald-500/30 px-3 py-1 rounded text-emerald-400">MySQL</span>
+          <span class="text-[10px] border border-emerald-500/30 px-3 py-1 rounded text-emerald-400">WinForms</span>
+        </div>
+        <a href="#" class="inline-block bg-white text-black px-6 sm:px-8 py-3 sm:py-4 rounded-full font-bold text-[10px] tracking-widest uppercase hover:bg-emerald-500 hover:text-white transition-all">Launch Preview</a>
+      </div>
+      <div class="md:col-span-7 bg-surface-container-low rounded-2xl p-4 border border-white/5 shadow-2xl">
+        <img src="./webtech.png" class="rounded-xl grayscale hover:grayscale-0 transition-all duration-700" alt="Medical AI">
+      </div>
+    </div>
+  </section>
+
+  <!-- Project 02: University Landing Page -->
+  <section id="uni-landing" class="py-16 sm:py-20 md:py-24 px-safe-margin max-w-[1440px] mx-auto border-t border-white/10">
+    <div class="grid grid-cols-1 md:grid-cols-12 gap-8 sm:gap-10 md:gap-12 items-center">
+      <div class="md:col-span-7 order-2 md:order-1 bg-surface-container-low rounded-2xl p-4 border border-white/5">
+        <img src="./proj1.jpeg" class="rounded-xl grayscale hover:grayscale-0 transition-all duration-700" alt="University Site">
+      </div>
+      <div class="md:col-span-5 order-1 md:order-2">
+        <span class="text-white/40 font-mono text-xs mb-4 block">02 // WEB DESIGN</span>
+        <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4 sm:mb-6 font-['Plus_Jakarta_Sans']">University of Sahiwal Landing</h2>
+        <p class="text-white/60 mb-6 sm:mb-8 leading-relaxed text-sm sm:text-base">A professional, responsive landing page using Bootstrap. Features a "Modern Academic" aesthetic with a Deep Navy and Gold color palette.</p>
+        <div class="flex flex-wrap gap-2 sm:gap-3 mb-8 sm:mb-10">
+          <span class="text-[10px] border border-emerald-500/30 px-3 py-1 rounded text-emerald-400">HTML5/CSS3</span>
+          <span class="text-[10px] border border-emerald-500/30 px-3 py-1 rounded text-emerald-400">Bootstrap 5</span>
+          <span class="text-[10px] border border-emerald-500/30 px-3 py-1 rounded text-emerald-400">UI/UX</span>
+        </div>
+        <a href="#" class="inline-block bg-white text-black px-6 sm:px-8 py-3 sm:py-4 rounded-full font-bold text-[10px] tracking-widest uppercase hover:bg-emerald-500 hover:text-white transition-all">Launch Preview</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Project 03: Expense Tracker -->
+  <section id="expense-tracker" class="py-16 sm:py-20 md:py-24 px-safe-margin max-w-[1440px] mx-auto border-t border-white/10">
+    <div class="grid grid-cols-1 md:grid-cols-12 gap-8 sm:gap-10 md:gap-12 items-center">
+      <div class="md:col-span-5">
+        <span class="text-white/40 font-mono text-xs mb-4 block">03 // UTILITY TOOL</span>
+        <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4 sm:mb-6 font-['Plus_Jakarta_Sans']">Expense Tracker Pro</h2>
+        <p class="text-white/60 mb-6 sm:mb-8 leading-relaxed text-sm sm:text-base">A sleek financial tracking tool built with Tailwind CSS. Optimized for fast data entry and clear visual summaries of spending habits.</p>
+        <div class="flex flex-wrap gap-2 sm:gap-3 mb-8 sm:mb-10">
+          <span class="text-[10px] border border-emerald-500/30 px-3 py-1 rounded text-emerald-400">JavaScript</span>
+          <span class="text-[10px] border border-emerald-500/30 px-3 py-1 rounded text-emerald-400">Tailwind CSS</span>
+          <span class="text-[10px] border border-emerald-500/30 px-3 py-1 rounded text-emerald-400">LocalStorage</span>
+        </div>
+        <a href="#" class="inline-block bg-white text-black px-6 sm:px-8 py-3 sm:py-4 rounded-full font-bold text-[10px] tracking-widest uppercase hover:bg-emerald-500 hover:text-white transition-all">Launch Preview</a>
+      </div>
+      <div class="md:col-span-7 bg-surface-container-low rounded-2xl p-4 border border-white/5">
+        <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&q=80" class="rounded-xl grayscale hover:grayscale-0 transition-all duration-700" alt="Expense Tracker">
+      </div>
+    </div>
+  </section>
+
+  <!-- Project 04: AI Automation Workflows -->
+  <section id="ai-automation" class="py-16 sm:py-20 md:py-24 px-safe-margin max-w-[1440px] mx-auto border-t border-white/10">
+    <div class="grid grid-cols-1 md:grid-cols-12 gap-8 sm:gap-10 md:gap-12 items-center">
+      <div class="md:col-span-7 order-2 md:order-1 bg-surface-container-low rounded-2xl p-4 border border-white/5">
+        <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&q=80" class="rounded-xl grayscale hover:grayscale-0 transition-all duration-700" alt="Automation">
+      </div>
+      <div class="md:col-span-5 order-1 md:order-2">
+        <span class="text-white/40 font-mono text-xs mb-4 block">04 // LOW-CODE AUTOMATION</span>
+        <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4 sm:mb-6 font-['Plus_Jakarta_Sans']">AI Voice & Workflow Agents</h2>
+        <p class="text-white/60 mb-6 sm:mb-8 leading-relaxed text-sm sm:text-base">Developing automated workflows using n8n and Antigravity. Focused on building responsive AI voice assistants and backend automation loops.</p>
+        <div class="flex flex-wrap gap-2 sm:gap-3 mb-8 sm:mb-10">
+          <span class="text-[10px] border border-emerald-500/30 px-3 py-1 rounded text-emerald-400">n8n</span>
+          <span class="text-[10px] border border-emerald-500/30 px-3 py-1 rounded text-emerald-400">Antigravity</span>
+          <span class="text-[10px] border border-emerald-500/30 px-3 py-1 rounded text-emerald-400">API Integration</span>
+        </div>
+        <a href="#" class="inline-block bg-white text-black px-6 sm:px-8 py-3 sm:py-4 rounded-full font-bold text-[10px] tracking-widest uppercase hover:bg-emerald-500 hover:text-white transition-all">Launch Preview</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Project 05: Frontend UI Components -->
+  <section id="frontend-ui" class="py-16 sm:py-20 md:py-24 px-safe-margin max-w-[1440px] mx-auto border-t border-b border-white/10">
+    <div class="grid grid-cols-1 md:grid-cols-12 gap-8 sm:gap-10 md:gap-12 items-center">
+      <div class="md:col-span-5">
+        <span class="text-white/40 font-mono text-xs mb-4 block">05 // FRONTEND REPOSITORY</span>
+        <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4 sm:mb-6 font-['Plus_Jakarta_Sans']">Modern UI Library</h2>
+        <p class="text-white/60 mb-6 sm:mb-8 leading-relaxed text-sm sm:text-base">A collection of custom-built frontend components using jQuery and Tailwind. Focused on high-end interactions and "Luxury Tech" design patterns.</p>
+        <div class="flex flex-wrap gap-2 sm:gap-3 mb-8 sm:mb-10">
+          <span class="text-[10px] border border-emerald-500/30 px-3 py-1 rounded text-emerald-400">jQuery</span>
+          <span class="text-[10px] border border-emerald-500/30 px-3 py-1 rounded text-emerald-400">Tailwind</span>
+          <span class="text-[10px] border border-emerald-500/30 px-3 py-1 rounded text-emerald-400">Canvas/Figma</span>
+        </div>
+        <a href="#" class="inline-block bg-white text-black px-6 sm:px-8 py-3 sm:py-4 rounded-full font-bold text-[10px] tracking-widest uppercase hover:bg-emerald-500 hover:text-white transition-all">Launch Preview</a>
+      </div>
+      <div class="md:col-span-7 bg-surface-container-low rounded-2xl p-4 border border-white/5">
+        <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&q=80" class="rounded-xl grayscale hover:grayscale-0 transition-all duration-700" alt="Frontend Repo">
+      </div>
+    </div>
+  </section>
+</main>
+<!-- <main>
+<!-- Hero Section 
+<section class="h-screen w-full relative overflow-hidden flex items-end pb-24 px-safe-margin">
+<div class="absolute inset-0 z-0">
+<img alt="" class="w-full h-full object-cover brightness-[0.4]" data-alt="A high-impact cinematic wide shot of a futuristic digital interface rendered in deep blacks and muted greys. The lighting is low-key with subtle sharp highlights on sharp glass edges and technical UI elements. The overall aesthetic is monochromatic and sophisticated, mirroring the dark-mode luxury theme. Fine atmospheric dust particles float in the soft, focused light beams, emphasizing a high-end, agency-level technical mastery." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBYQkzCdgtpfK-R2WYfBFqbE5xhiaAi3-q6Vf146DjnRPaHmQ382te85FzVGNi3PTklDz-aC_PI5jeOK-RRc1qDIxcgTUTc9b7_5fKqxjGmLGKkOh6m7LkCHasBP5BdKxrx3tgja2k0CZbfvAjk9lsuPKF-xqEyYDG_qyEufduffOuLfz4pFnalgny-vdMWbcqH87PHj42mX-S_2lT1b-BASwFlw4hpWKfRxUm2ZnBV1P5HlIecmxkGLSVMZczLxe3q1TRwZ8orZjuF"/>
+</div>
+<div class="relative z-10 w-full max-w-[1440px] mx-auto">
+<div class="max-w-4xl">
+<span class="font-label-caps text-label-caps uppercase tracking-widest text-white/60 mb-6 block">Case Study // 01</span>
+<h1 class="font-display-xl text-display-xl text-white mb-8">SYNTHESIS</h1>
+<div class="w-32 h-[1px] bg-white"></div>
+</div>
+</div>
+</section>
+<!-- Project Overview 
+<section class="py-section-gap px-safe-margin max-w-[1440px] mx-auto">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-grid-gutter">
+<!-- Details Sidebar 
+<div class="md:col-span-4 space-y-12">
+<div>
+<h4 class="font-label-caps text-label-caps text-white/40 mb-4 uppercase">Role</h4>
+<p class="font-body-lg text-body-lg text-white">Lead Architect &amp; System Designer</p>
+</div>
+<div>
+<h4 class="font-label-caps text-label-caps text-white/40 mb-4 uppercase">Technologies</h4>
+<div class="flex flex-wrap gap-3">
+<span class="px-4 py-2 border border-white/20 rounded-full font-label-caps text-[10px] text-white hover:bg-white hover:text-[#080808] transition-all">REACT</span>
+<span class="px-4 py-2 border border-white/20 rounded-full font-label-caps text-[10px] text-white hover:bg-white hover:text-[#080808] transition-all">TYPESCRIPT</span>
+<span class="px-4 py-2 border border-white/20 rounded-full font-label-caps text-[10px] text-white hover:bg-white hover:text-[#080808] transition-all">NODE.JS</span>
+<span class="px-4 py-2 border border-white/20 rounded-full font-label-caps text-[10px] text-white hover:bg-white hover:text-[#080808] transition-all">WEBGL</span>
+</div>
+</div>
+<div>
+<h4 class="font-label-caps text-label-caps text-white/40 mb-4 uppercase">Timeline</h4>
+<p class="font-body-lg text-body-lg text-white">Q3 2023 — Q1 2024</p>
+</div>
+</div>
+<!-- Narrative Content 
+<div class="md:col-span-8 space-y-12">
+<h2 class="font-headline-md text-headline-md text-white">The convergence of data and human intuition.</h2>
+<div class="space-y-8 max-w-2xl">
+<p class="font-body-lg text-body-lg text-white/80">
+                            Synthesis was born from the need to bridge the gap between complex algorithmic outputs and actionable business insights. The project involved building a proprietary visualization engine capable of handling multi-dimensional data sets in real-time.
+                        </p>
+<p class="font-body-md text-body-md text-white/60">
+                            Our primary challenge was maintaining performance without sacrificing the visual fidelity required for high-stakes executive presentations. We implemented a custom WebGL layer that offloads heavy computation to the GPU, ensuring a seamless 60fps experience even with 100k+ data points active.
+                        </p>
+</div>
+</div>
+</div>
+</section>
+<!-- Project Visual Grid (Editorial style) 
+<section class="mb-section-gap px-safe-margin max-w-[1440px] mx-auto">
+<div class="grid grid-cols-12 gap-8">
+<div class="col-span-12 md:col-span-8 h-[700px] bg-surface-container-lowest">
+<img alt="" class="w-full h-full object-cover" data-alt="A detailed macro shot of a complex circuit board with glowing neon pathways in cool blue and white tones. The lighting emphasizes the intricate textures of the hardware, creating a high-tech atmosphere. The composition is sharp and intentional, with shallow depth of field focusing on a central processor, embodying the sophisticated technical mastery of the project." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAnE5jw65CizrvcSv2PKsZe7LPBSgsTRBD6yNvOl9DjenW2aV6G1NmvUR5WWG1wUKoTcJChOCiLTMi97FJQ4Mcwdu8v5yZAKfv_7bcdLXuDU-uxGGvBZnP0g_B4t2SptOfn6OLOyh95cy-qlcDNwTKUyuN6TtH00zioxn8hjM9NZMyj3ZpgS6lSGiHnEWWIj2hvLjHTsLpzC6hgIg0yc9qzg08VQNdP3qHNGjS2EKLTYAJTX69iklWGeSLdM87TxWqiC8JMRPq0SCnq"/>
+</div>
+<div class="col-span-12 md:col-span-4 flex flex-col gap-8">
+<div class="h-[334px] bg-surface-container-lowest">
+<img alt="" class="w-full h-full object-cover" data-alt="A spherical digital globe representation composed of glowing white dots and connecting lines against a deep black background. The visual is ethereal and clean, representing global connectivity and data synthesis. The palette is strictly monochromatic with varying intensities of light, maintaining a luxury digital art aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDWYeV7WNv82nPxFe8nTgg-HxmbrWxRIOAkNV44IT3SjuOqVbHqgXDEB__h5yxJubAZUElxWynnPc2-BZfg5C9LW0yTL4IJXw-rx38KJ-t8_kBYs7u_SSEjw5dCGxUdmYAQadV1apSOVSNhTZpInUYTcV7Qm9AtPBKAo9mXWobi8i6NaknQ5JQ_Tx6h0gw_9bZ6bawJG2Eu5iRqMyboT5Nf9MfZXd9d1DMwSxrdTpT9mDOMyTQIgj2bApVbmYXWf4w_qZSTMa8coyta"/>
+</div>
+<div class="h-[334px] bg-surface-container-lowest">
+<img alt="" class="w-full h-full object-cover" data-alt="Abstract architectural shot of a brutalist concrete building interior with dramatic shadow play and sharp geometric lines. The high contrast between the dark corners and the bright highlights on the gray concrete surfaces creates a heavy, grounded feeling that aligns with the atmospheric minimalism of the portfolio." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCzPRLo4TY_au9sh_-pK45ecJNOMuvHPuaLVyVW3aD2HoCGRDrIuu95ohLN79ej9JrN9MRJDYLWhwV13Cns8IXd3dkkNbxG14gfAADRmQIOFwAPnzHIZ5LvEvn61y1p6H4gicaY3VFQ2_Xzs69t0h_CZg03T2Gs0iFXlWV-AWd0zjH5nqkyBaqlkwm7d8p5L8b2uVVvL_MAIi-hjvTHbEjchY116MNFMCCNtQnO1DS6k3In1Pe4POCOgXIulnvGL2CVzTybxISCIvwI"/>
+</div>
+</div>
+</div>
+</section>
+<!-- Outcome Section
+<section class="py-section-gap bg-[#121212]">
+<div class="px-safe-margin max-w-[1440px] mx-auto grid grid-cols-1 md:grid-cols-2 gap-24 items-center">
+<div class="order-2 md:order-1">
+<h3 class="font-headline-md text-headline-md text-white mb-8">Measurable Mastery.</h3>
+<div class="grid grid-cols-2 gap-12">
+<div>
+<span class="font-display-lg text-[64px] leading-none text-white block mb-2">40%</span>
+<span class="font-label-caps text-label-caps text-white/40 uppercase">Reduced Latency</span>
+</div>
+<div>
+<span class="font-display-lg text-[64px] leading-none text-white block mb-2">2.4M</span>
+<span class="font-label-caps text-label-caps text-white/40 uppercase">Requests/Sec</span>
+</div>
+</div>
+</div>
+<div class="order-1 md:order-2">
+<p class="font-body-lg text-body-lg text-white/70 leading-relaxed italic border-l-2 border-white/20 pl-12">
+                        "The technical precision delivered in the Synthesis engine transformed how our analysts interact with high-frequency market signals. It's not just a tool; it's a competitive advantage."
+                    </p>
+</div>
+</div>
+</section>
+<!-- Next Project Call to Action 
+<a class="group relative block w-full bg-[#080808] overflow-hidden border-t border-white/10" href="#">
+<div class="px-safe-margin py-32 max-w-[1440px] mx-auto flex justify-between items-center relative z-10">
+<div>
+<span class="font-label-caps text-label-caps text-white/40 uppercase mb-4 block">Up Next</span>
+<h2 class="font-display-lg text-display-lg text-white group-hover:translate-x-4 transition-transform duration-700 ease-in-out">KINETIC</h2>
+</div>
+<div class="hidden md:block">
+<span class="material-symbols-outlined text-[120px] text-white/20 group-hover:text-white transition-colors duration-500">arrow_forward</span>
+</div>
+</div>
+<!-- Hover Background Image Reveal Effect 
+<div class="absolute inset-0 z-0 opacity-0 group-hover:opacity-20 transition-opacity duration-1000">
+<img alt="" class="w-full h-full object-cover" data-alt="Blurred motion shot of high-speed technical equipment with orange and teal light trails. The image captures a sense of rapid movement and kinetic energy, contrasting with the dark background to create a dynamic but sophisticated visual link to the next project." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDnudg6hL5f7geOLaj9FPzcUFGcIuq0psSpnt4v8UXM8qlcYGod4FMw3YhJ0Dyz07DuMzd3Hp-CrFqrPh9Y535deUIy-NTORqCFZMQFolwSp-ohxqxny06KwcQ7iYKAs9uXKxjyre0AvqocaaTtVXJ3Y5Whny3F_ueCZyyS1ih6valYrhozmVdbAnAcDsm-YnOUkDlcksAqiIagxLTQRuY8vZnraMT0gBhHEE2b1ck7Ki57ILeslaRrHMKM9OPrycfSZ6kaWBGAj6kQ"/>
+</div>
+</a>
+</main> -->
+<!-- Footer -->
+<footer class="bg-[#080808] border-t border-white/10">
+<div class="flex flex-col md:flex-row justify-between items-center w-full px-6 sm:px-8 md:px-12 py-12 sm:py-16 max-w-[1440px] mx-auto text-center md:text-left">
+<div class="mb-8 md:mb-0">
+<span class="font-['Plus_Jakarta_Sans'] text-lg font-bold text-white tracking-[0.3em]">PORTFOLIO</span>
+<p class="font-['Plus_Jakarta_Sans'] text-[10px] tracking-[0.3em] uppercase text-white/50 mt-2">© 2024 PORTFOLIO — ALL RIGHTS RESERVED</p>
+</div>
+<div class="flex flex-wrap justify-center gap-6 sm:gap-8 md:gap-12">
+<a class="font-['Plus_Jakarta_Sans'] text-[10px] tracking-[0.3em] uppercase text-white/50 hover:text-white underline underline-offset-8 transition-all" href="#">Fiverr</a>
+<a class="font-['Plus_Jakarta_Sans'] text-[10px] tracking-[0.3em] uppercase text-white/50 hover:text-white underline underline-offset-8 transition-all" href="#">Upwork</a>
+<a class="font-['Plus_Jakarta_Sans'] text-[10px] tracking-[0.3em] uppercase text-white/50 hover:text-white underline underline-offset-8 transition-all" href="#">Guru</a>
+<a class="font-['Plus_Jakarta_Sans'] text-[10px] tracking-[0.3em] uppercase text-white/50 hover:text-white underline underline-offset-8 transition-all" href="#">Mail</a>
+</div>
+</div>
+</footer>
+<!-- Navigation Drawer (Right Side) -->
+<div class="fixed right-0 top-0 h-full w-full md:w-[400px] bg-[#080808] border-l border-white/10 z-[60] translate-x-full transition-transform duration-700 ease-in-out hidden" id="drawer" aria-hidden="true" role="navigation">
+<div class="flex flex-col justify-center gap-8 sm:gap-10 md:gap-12 p-6 sm:p-8 md:p-12 h-full">
+<div class="mb-6 sm:mb-8 flex justify-between items-center absolute top-6 left-6 right-6 md:static md:mb-8">
+<span class="font-['Plus_Jakarta_Sans'] text-xl sm:text-2xl font-bold text-white tracking-widest">NAVIGATION</span>
+<button id="drawer-close" type="button" aria-label="Close navigation menu" class="material-symbols-outlined text-white text-3xl cursor-pointer">close</button>
+</div>
+<nav class="flex flex-col gap-6 sm:gap-8">
+<a class="drawer-link font-['Plus_Jakarta_Sans'] text-2xl sm:text-3xl md:text-4xl font-light uppercase tracking-widest text-white pl-4 border-l-2 border-white hover:pl-6 transition-all duration-700 ease-in-out" href="./Works.html">
+<span class="material-symbols-outlined mr-4">grid_view</span> Work
+                </a>
+<a class="drawer-link font-['Plus_Jakarta_Sans'] text-2xl sm:text-3xl md:text-4xl font-light uppercase tracking-widest text-white/30 hover:text-white/80 hover:pl-6 transition-all duration-700 ease-in-out" href="./Archive.html">
+<span class="material-symbols-outlined mr-4">history</span> Archive
+                </a>
+<a class="drawer-link font-['Plus_Jakarta_Sans'] text-2xl sm:text-3xl md:text-4xl font-light uppercase tracking-widest text-white/30 hover:text-white/80 hover:pl-6 transition-all duration-700 ease-in-out" href="./About.html">
+<span class="material-symbols-outlined mr-4">person</span> About
+                </a>
+<a class="drawer-link font-['Plus_Jakarta_Sans'] text-2xl sm:text-3xl md:text-4xl font-light uppercase tracking-widest text-white/30 hover:text-white/80 hover:pl-6 transition-all duration-700 ease-in-out" href="./Contact.html">
+<span class="material-symbols-outlined mr-4">mail</span> Contact
+                </a>
+</nav>
+</div>
+</div>
+<script>
+    (function () {
+        var drawer = document.getElementById('drawer');
+        var openBtn = document.getElementById('drawer-open');
+        var closeBtn = document.getElementById('drawer-close');
+        var backdrop = document.getElementById('drawer-backdrop');
+
+        if (!drawer || !openBtn || !closeBtn || !backdrop) return;
+
+        function openDrawer() {
+            drawer.classList.remove('hidden');
+            backdrop.classList.remove('hidden');
+            requestAnimationFrame(function () {
+                drawer.classList.remove('translate-x-full');
+            });
+            drawer.setAttribute('aria-hidden', 'false');
+            openBtn.setAttribute('aria-expanded', 'true');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeDrawer() {
+            drawer.classList.add('translate-x-full');
+            backdrop.classList.add('hidden');
+            drawer.setAttribute('aria-hidden', 'true');
+            openBtn.setAttribute('aria-expanded', 'false');
+            document.body.style.overflow = '';
+            setTimeout(function () {
+                if (drawer.classList.contains('translate-x-full')) {
+                    drawer.classList.add('hidden');
+                }
+            }, 700);
+        }
+
+        openBtn.addEventListener('click', openDrawer);
+        closeBtn.addEventListener('click', closeDrawer);
+        backdrop.addEventListener('click', closeDrawer);
+
+        document.querySelectorAll('.drawer-link').forEach(function (link) {
+            link.addEventListener('click', closeDrawer);
+        });
+
+        document.addEventListener('keydown', function (e) {
+            if (e.key === 'Escape') closeDrawer();
+        });
+
+        window.addEventListener('resize', function () {
+            if (window.innerWidth >= 768 && !drawer.classList.contains('translate-x-full')) {
+                closeDrawer();
+            }
+        });
+    })();
+</script>
+</body></html>
